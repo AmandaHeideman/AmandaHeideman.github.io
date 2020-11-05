@@ -1,0 +1,43 @@
+$lightShade: #F5F6F4;
+$lightAcc: #7F8CAB;
+$mainCol: #46106D;
+$darkAcc: #AA4A5F;
+$darkShade: #1C121D;
+
+@import "./about";
+
+
+@mixin flexCenter($direction, $background){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+    background-color: $background;
+}
+body{
+    background-color: $lightShade;
+    color: $darkShade;
+
+    //@include flexCenter(column, red;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: $darkShade 2px solid;
+    nav{
+        display:flex;
+        justify-content: space-evenly;
+        width: 30%;
+        a{
+            color: $darkShade;
+            text-decoration: none;
+            &:hover{
+                background-color: $darkAcc;
+            }
+        }
+    }
+}
+h2{
+    color:red;
+}

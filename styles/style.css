@@ -1,0 +1,42 @@
+p {
+  font-size: 2em;
+}
+
+body {
+  background-color: #F5F6F4;
+  color: #1C121D;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: #1C121D 2px solid;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 30%;
+}
+
+header nav a {
+  color: #1C121D;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  background-color: #AA4A5F;
+}
+
+h2 {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
