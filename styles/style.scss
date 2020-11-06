@@ -1,43 +1,110 @@
-$lightShade: #F5F6F4;
-$lightAcc: #7F8CAB;
-$mainCol: #46106D;
-$darkAcc: #AA4A5F;
-$darkShade: #1C121D;
+$lightShade:#E8DBE7; // #F5F6F4;
+$lightAcc: #7E1C6F; //#7F8CAB;
+$mainCol: #3F5FA5; //#46106D;
+$darkAcc: #431D3C; // #AA4A5F;
+$darkShade: #171826; //#1C121D;
 
 @import "./about";
 
 
-@mixin flexCenter($direction, $background){
+@mixin flexCenter($direction){
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: $direction;
-    background-color: $background;
+    flex-direction: $direction;;
+}
+@mixin contentDiv{
+    background-color: $darkAcc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
 }
 body{
-    background-color: $lightShade;
-    color: $darkShade;
-
-    //@include flexCenter(column, red;
+    background-color: $darkShade;
+    background-image: url("./bg_bggenerator_com.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $lightShade;
+    margin: 0;
+    font-family: 'El Messiri', sans-serif;
+    /* font-family: 'Amatic SC', cursive;
+    font-size: 1.5em; */
+    p{
+        font-family: 'Raleway', sans-serif;
+        //font-size: 0.7em;
+    }
+    //font-family: 'Abel', sans-serif;
 }
 
 header{
     display: flex;
-    justify-content: flex-end;
-    border-bottom: $darkShade 2px solid;
+    justify-content: space-between;
+    border-bottom: $lightShade 2px solid;
+    position: sticky;
+    top: 0;
+    background-color: $darkShade;
+    width: 100%;
+    a{
+        color: $lightShade;
+        text-decoration: none;
+        padding: 0px 15px;
+        min-width: 62px;
+        &:hover{
+            background-color: $lightAcc;
+        }
+    }
     nav{
         display:flex;
         justify-content: space-evenly;
         width: 30%;
-        a{
-            color: $darkShade;
-            text-decoration: none;
-            &:hover{
-                background-color: $darkAcc;
-            }
-        }
     }
 }
-h2{
-    color:red;
+.firstPage{
+    height: 100%;
+    @include flexCenter(column);
+    div{
+        width: 300px;
+        @include contentDiv();
+    }
+}
+.about{
+    @extend .firstPage;
+    div{
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+.contact{
+    @extend .firstPage;
+}
+.portfolio{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .project{
+        @include contentDiv();
+        justify-self: center;
+        height: 300px;
+        width: 200px;
+    }
+}
+@media screen and (min-width: 1240px){
+    .portfolio{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 930px){
+    .portfolio{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 580px){
+    .portfolio{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (orientation: portrait){
+    //nav blir hamburgermeny
+    //mindre height portfolio
 }
