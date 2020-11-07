@@ -35,10 +35,17 @@ header a {
   text-decoration: none;
   padding: 0px 15px;
   min-width: 62px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: #7E1C6F;
 }
 
-header a:hover {
-  background-color: #7E1C6F;
+header a:hover, header a:focus {
+  background-color: rgba(126, 28, 111, 0.5);
+  border-left: 4px solid #7E1C6F;
+  border-right: 4px solid #7E1C6F;
+  outline: none;
+  cursor: pointer;
 }
 
 header nav {
@@ -95,10 +102,71 @@ header nav {
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
+  padding-top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: #7E1C6F;
   -ms-grid-column-align: center;
       justify-self: center;
+  text-align: center;
   height: 300px;
   width: 200px;
+}
+
+.portfolio .project:hover, .portfolio .project:focus {
+  background-color: rgba(67, 29, 60, 0.7);
+  border-left: 4px solid #7E1C6F;
+  border-right: 4px solid #7E1C6F;
+  outline: none;
+  cursor: pointer;
+}
+
+.portfolio .project h3 {
+  margin-top: 5px;
+}
+
+.portfolio .yatzy {
+  background-image: url(../images/yatzy_purple.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portfolio .yatzy:hover {
+  width: 210px;
+  background-image: url(../images/yatzy_color.png);
+}
+
+.portfolio .quiz {
+  background-image: url(../images/quiz_purple.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portfolio .quiz:hover {
+  width: 210px;
+  background-image: url(../images/quiz_color.png);
+}
+
+.portfolio .ACME {
+  background-image: url(../images/ACME_purple.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portfolio .ACME:hover {
+  width: 210px;
+  background-image: url(../images/ACME_color.png);
+}
+
+.portfolio .memory {
+  background-image: url(../images/memory_purple.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portfolio .memory:hover {
+  width: 210px;
+  background-image: url(../images/memory_color.png);
 }
 
 @media screen and (min-width: 1240px) {

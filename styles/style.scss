@@ -19,6 +19,26 @@ $darkShade: #171826; //#1C121D;
     padding: 20px;
     margin: 20px;
 }
+@mixin hover($color, $opacity){
+    transition: 0.5s;
+    border: $lightAcc;
+    &:hover, &:focus{
+        background-color:rgba($color, $opacity);
+        border-left:4px solid $lightAcc;
+        border-right:4px solid $lightAcc;
+        outline: none;
+        cursor: pointer;
+        }
+}
+@mixin portfolioImage($id){
+    background-image: url(../images/#{$id}_purple.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover{
+        width: 210px;
+        background-image: url(../images/#{$id}_color.png);
+    }
+}
 body{
     background-color: $darkShade;
     background-image: url("./bg_bggenerator_com.png");
@@ -50,9 +70,7 @@ header{
         text-decoration: none;
         padding: 0px 15px;
         min-width: 62px;
-        &:hover{
-            background-color: $lightAcc;
-        }
+        @include hover($lightAcc, 0.5);
     }
     nav{
         display:flex;
@@ -84,9 +102,27 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     .project{
         @include contentDiv();
+        padding-top: 0;
+        @include hover($darkAcc, 0.7);
         justify-self: center;
+        text-align: center;
         height: 300px;
         width: 200px;
+        h3{
+            margin-top: 5px;
+        }
+    }
+    .yatzy{
+        @include portfolioImage(yatzy);
+    }
+    .quiz{
+        @include portfolioImage(quiz);
+    }
+    .ACME{
+        @include portfolioImage(ACME);
+    }
+    .memory{
+        @include portfolioImage(memory);
     }
 }
 @media screen and (min-width: 1240px){
