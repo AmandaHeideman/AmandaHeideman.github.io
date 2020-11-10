@@ -28,12 +28,13 @@ $darkShade: #171826; //#1C121D;
         border-right:4px solid $lightAcc;
         outline: none;
         cursor: pointer;
-        }
+    }
 }
 @mixin portfolioImage($id){
     background-image: url(../images/#{$id}_purple.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 200px 240px;
     &:hover{
         width: 210px;
         background-image: url(../images/#{$id}_color.png);
@@ -48,13 +49,14 @@ body{
     color: $lightShade;
     margin: 0;
     font-family: 'El Messiri', sans-serif;
-    /* font-family: 'Amatic SC', cursive;
-    font-size: 1.5em; */
     p{
         font-family: 'Raleway', sans-serif;
-        //font-size: 0.7em;
     }
-    //font-family: 'Abel', sans-serif;
+    a{
+        color: $lightShade;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+    }
 }
 
 header{
@@ -66,10 +68,9 @@ header{
     background-color: $darkShade;
     width: 100%;
     a{
-        color: $lightShade;
-        text-decoration: none;
         padding: 0px 15px;
         min-width: 62px;
+        font-family: "El Messiri", sans-serif;
         @include hover($lightAcc, 0.5);
     }
     nav{
@@ -94,7 +95,24 @@ header{
     }
 }
 .contact{
-    @extend .firstPage;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px;
+    div{
+        @include contentDiv();
+        display: flex;
+        flex-direction: column;
+        h1{
+            text-align: center;
+            margin-top: 0;
+        }
+        a{
+            @include hover($lightShade, 0.5);
+            &:hover, &:focus{
+                color: white;
+            }
+        }
+    }
 }
 .portfolio{
     justify-self: center;
@@ -103,7 +121,6 @@ header{
     .project{
         @include contentDiv();
         padding-top: 0;
-        @include hover($darkAcc, 0.7);
         justify-self: center;
         text-align: center;
         height: 300px;
@@ -111,18 +128,49 @@ header{
         h3{
             margin-top: 5px;
         }
+        p{
+            text-align: left;
+        }
+        a{
+            display: flex;
+            align-items: space-evenly;
+            @include hover($lightAcc, 0.7);
+            width: 30%;
+        }
     }
     .yatzy{
         @include portfolioImage(yatzy);
+        @include hover($darkAcc, 0.7);
     }
     .quiz{
         @include portfolioImage(quiz);
+        @include hover($darkAcc, 0.7);
     }
     .ACME{
         @include portfolioImage(ACME);
+        @include hover($darkAcc, 0.7);
     }
     .memory{
         @include portfolioImage(memory);
+        @include hover($darkAcc, 0.7);
+        
+    }
+    .show{
+        //pointer-events: none;
+        a{
+            @include hover($lightShade, 0.5);
+            &:hover, &:focus{
+                color: white;
+            }
+        }
+        width: 80%;
+        height: auto;
+        background-image: none;
+        grid-column-start: 1;
+        grid-column: span 4;
+    }
+    .hide{
+        display: none;
     }
 }
 @media screen and (min-width: 1240px){

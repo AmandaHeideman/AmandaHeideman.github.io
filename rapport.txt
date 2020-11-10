@@ -1,0 +1,25 @@
+ACCESSABILITY
+
+--1.4.3: Använd tillräcklig kontrast mellan text och bakgrund--
+Det här tillgänglighetskravet är något som jag tänker på i alla mina projekt, att ha 
+tillräcklig kontrast mellan text och bakgrund. När kontrasten blir för låg blir det svårt 
+för alla att fokusera och kunna läsa texten, men framförallt för personer med synnedsättning
+blir trösklen högre för hur stor kontrasten måste vara för att det ska vara läsbart. 
+Det här tycker jag är ett enkelt tillgänglighetskrav att ha med, som hjälper mycket. Det är
+lätt att kolla så att man har tillräcklig hög kontrast, och det är enkelt att rätta till ifall
+kontrasten skulle vara för låg.  
+
+--2.3.1: Orsaka inte epileptiska anfall genom blinkande--
+Det här är också ett tillgänglighetskrav som är lätt att tillgodose, det är bara att undvika
+att ha innehåll som blinkar. För en person med epilepsi är det inte kul att hela tiden vara
+på sin vakt mot saker som blinkar, att då kunna ha en hemsida som de faktiskt kan använda
+borde vara en självklarhet.
+
+--2.4.4 Skriv tydliga länkar--
+Det här kan vara lite trixigt om man inte tänker sig för. Tydliga länkar är bra för alla,
+men framförallt för personer som använder skärmläsare, då länkar kan läsas upp separat
+från texten. Att länken tydligt beskriver vad den länkar till underlättar för användaren
+att veta ifall det är något den vill trycka på. Jag har försökt att skriva så tydliga
+länkar som möjligt, där texten som syns på sidan faktiskt säger vad länken leder till.
+Ifall jag hade haft länkar som varit mer otydliga eller svåra att beskriva kort i text så
+hade jag använt aria-label också.
