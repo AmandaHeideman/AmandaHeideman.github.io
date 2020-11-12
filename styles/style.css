@@ -17,6 +17,8 @@ body a {
   color: #E8DBE7;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
@@ -35,7 +37,7 @@ header {
 }
 
 header a {
-  padding: 0px 15px;
+  padding: 18.5px 15px;
   min-width: 62px;
   font-family: "El Messiri", sans-serif;
   -webkit-transition: 0.5s;
@@ -51,14 +53,30 @@ header a:hover, header a:focus {
   cursor: pointer;
 }
 
+header h3 .portrait {
+  display: none;
+}
+
 header nav {
+  height: 66.77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .firstPage, .about {
@@ -197,7 +215,7 @@ header nav {
   border: #7E1C6F;
 }
 
-.portfolio .yatzy:hover {
+.portfolio .yatzy:hover, .portfolio .yatzy:focus {
   width: 210px;
   background-image: url(../images/yatzy_color.png);
 }
@@ -220,7 +238,7 @@ header nav {
   border: #7E1C6F;
 }
 
-.portfolio .quiz:hover {
+.portfolio .quiz:hover, .portfolio .quiz:focus {
   width: 210px;
   background-image: url(../images/quiz_color.png);
 }
@@ -243,7 +261,7 @@ header nav {
   border: #7E1C6F;
 }
 
-.portfolio .ACME:hover {
+.portfolio .ACME:hover, .portfolio .ACME:focus {
   width: 210px;
   background-image: url(../images/ACME_color.png);
 }
@@ -266,7 +284,7 @@ header nav {
   border: #7E1C6F;
 }
 
-.portfolio .memory:hover {
+.portfolio .memory:hover, .portfolio .memory:focus {
   width: 210px;
   background-image: url(../images/memory_color.png);
 }
@@ -286,6 +304,10 @@ header nav {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column: span 4;
+}
+
+.portfolio .show:focus {
+  outline: none;
 }
 
 .portfolio .show a {
@@ -325,9 +347,72 @@ header nav {
 }
 
 @media screen and (max-width: 580px) {
+  header h3 .landscape {
+    display: none;
+  }
+  header h3 .portrait {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    left: 15px;
+    top: 0;
+  }
   .portfolio {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  .nav-links {
+    position: fixed;
+    background-color: #171826;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    pointer-events: all;
+    position: relative;
+    top: 133.54px;
+  }
+  .nav-links.open a {
+    width: 273px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: #7E1C6F;
+    text-align: center;
+    /* padding: 18.5px 90px;
+            max-width: 273px; */
+  }
+  .nav-links.open a:hover, .nav-links.open a:focus {
+    background-color: rgba(126, 28, 111, 0.5);
+    border-left: 4px solid #7E1C6F;
+    border-right: 4px solid #7E1C6F;
+    outline: none;
+    cursor: pointer;
+  }
+  nav.open {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

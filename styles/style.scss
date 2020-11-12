@@ -35,11 +35,13 @@ $darkShade: #171826; //#1C121D;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200px 240px;
-    &:hover{
+    &:hover, &:focus{
         width: 210px;
         background-image: url(../images/#{$id}_color.png);
     }
 }
+
+
 body{
     background-color: $darkShade;
     background-image: url("./bg_bggenerator_com.png");
@@ -56,7 +58,9 @@ body{
         color: $lightShade;
         text-decoration: none;
         font-family: 'Raleway', sans-serif;
+        box-sizing: border-box;
     }
+    
 }
 
 header{
@@ -68,15 +72,25 @@ header{
     background-color: $darkShade;
     width: 100%;
     a{
-        padding: 0px 15px;
+        padding: 18.5px 15px;
         min-width: 62px;
         font-family: "El Messiri", sans-serif;
         @include hover($lightAcc, 0.5);
     }
+    h3{
+        .portrait{
+            display: none;
+        }
+    }
     nav{
-        display:flex;
-        justify-content: space-evenly;
-        width: 30%;
+        height: 66.77px;
+        display: flex;
+        align-items: center;
+        .nav-links{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
     }
 }
 .firstPage{
@@ -157,6 +171,9 @@ header{
     }
     .show{
         //pointer-events: none;
+        &:focus{
+            outline:none;
+        }
         a{
             @include hover($lightShade, 0.5);
             &:hover, &:focus{
@@ -184,11 +201,64 @@ header{
     }
 }
 @media screen and (max-width: 580px){
+    
+    header{
+        h3{
+            .landscape{
+                display: none;
+            }
+            .portrait{
+                display: flex;
+                position: fixed;
+                left: 15px;
+                top:0;
+            }
+        }
+        
+    }
     .portfolio{
         grid-template-columns: 1fr;
     }
-}
-@media screen and (orientation: portrait){
-    //nav blir hamburgermeny
-    //mindre height portfolio
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    nav{
+        position: relative;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        
+    }
+    .nav-links{
+        position: fixed;
+        background-color: $darkShade;
+        width: 100%;
+        flex-direction: column;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        pointer-events: all;
+        position: relative;
+        top: 133.54px;
+        
+        a{
+            width: 273px;
+            @include hover($lightAcc, 0.5);
+            text-align: center;
+            /* padding: 18.5px 90px;
+            max-width: 273px; */
+        }
+    }
+    nav.open{
+        width: 50%;
+    }
+    
 }

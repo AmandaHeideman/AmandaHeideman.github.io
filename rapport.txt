@@ -15,7 +15,15 @@ att ha innehåll som blinkar. För en person med epilepsi är det inte kul att h
 på sin vakt mot saker som blinkar, att då kunna ha en hemsida som de faktiskt kan använda
 borde vara en självklarhet.
 
---2.4.4 Skriv tydliga länkar--
+--2.4.3: Gör en logisk tab-ordning--
+Tabordning är viktig bla för att skärmläsare ska kunna följa sidan på ett logiskt sätt,
+men underlättar också för folk som inte använder mus. Tabordningen följer ordningen i
+html-dokumentet, så för det mesta är det inget problem att få med det här tillgänglighetskravet. 
+Jag hade däremot att man kunde trycka på div:ar för att få fram mer information om valt 
+projekt, vilket jag löst mha click-event i js. För att kunna tab:a sig fram mellan div:arna
+la jag till tabindex i html:en, samt en keyup-eventlyssnare i js som lyssnar efter Enter.
+
+--2.4.4: Skriv tydliga länkar--
 Det här kan vara lite trixigt om man inte tänker sig för. Tydliga länkar är bra för alla,
 men framförallt för personer som använder skärmläsare, då länkar kan läsas upp separat
 från texten. Att länken tydligt beskriver vad den länkar till underlättar för användaren
@@ -23,3 +31,14 @@ att veta ifall det är något den vill trycka på. Jag har försökt att skriva 
 länkar som möjligt, där texten som syns på sidan faktiskt säger vad länken leder till.
 Ifall jag hade haft länkar som varit mer otydliga eller svåra att beskriva kort i text så
 hade jag använt aria-label också.
+
+--2.4.7: Markera tydligt vilket fält eller element som är i fokus--
+Jag brukar sällan vilja använda browserns default när det gäller fokus, utan jag vill ofta att
+hover och focus ser likadana ut. Samma sak här gäller som för 1.4.3, det ska vara tydlig kontrast
+mellan det som är i fokus och det runt om så att man tydligt kan se vad som är i fokus, 
+samt att kontrasten mellan text och bakgrund fortfarande måste vara tydlig. Jag hade lite
+problem med denna då kontrasten mellan det som var i fokus och bakgrunden från början inte
+var tillräckligt hög, men när jag ändrade färg på fokusen blev kontrasten mellan den och texten
+inte tillräckligt hög. Jag testade att helt byta färg både fokus och text, men jag upplevde
+det som jobbigt för ögonen när bådda bytte så drastiskt, så istället ljusade jag upp texten mer.
+Kontrasten är fortfarande inte helt optimal, men den är godkänd.
