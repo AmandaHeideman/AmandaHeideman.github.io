@@ -51,6 +51,7 @@ body{
     color: $lightShade;
     margin: 0;
     font-family: 'El Messiri', sans-serif;
+    line-height: 1.5;
     p{
         font-family: 'Raleway', sans-serif;
     }
@@ -95,17 +96,34 @@ header{
 }
 .firstPage{
     height: 100%;
-    @include flexCenter(column);
     div{
-        width: 300px;
-        @include contentDiv();
+        h1{
+            font-size: 4em;
+            text-align: center;
+        }
+        h3{
+            font-size: 1.5em;
+            font-family: 'Raleway', sans-serif;
+            font-style: italic;
+            text-align: center;
+        }
     }
 }
 .about{
-    @extend .firstPage;
+    height: 100%;
     div{
+        @include contentDiv();
         width: 80%;
         margin: 20px auto;
+        display: grid;
+        p{
+            grid-row-start: 2;
+        }
+        img{
+            grid-row-start: 2;
+            width: 95%;
+            margin-left: 20px;
+        }
     }
 }
 .contact{
@@ -175,6 +193,7 @@ header{
             outline:none;
         }
         a{
+            width: 100%;
             @include hover($lightShade, 0.5);
             &:hover, &:focus{
                 color: white;
@@ -185,6 +204,18 @@ header{
         background-image: none;
         grid-column-start: 1;
         grid-column: span 4;
+        
+        figure{
+            margin: 10px;
+            float:right;
+            img{
+                width: 300px;
+                transition:transform 0.25s ease;
+                &:hover{
+                    transform:scale(1.5);
+                }
+            }
+        }
     }
     .hide{
         display: none;
@@ -194,10 +225,22 @@ header{
     .portfolio{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    
 }
 @media screen and (max-width: 930px){
     .portfolio{
         grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 800px){
+    .about{
+        div{
+            img{
+                grid-row-start: 3;
+                margin-left: 0;
+                width: 100%;
+            }
+        }
     }
 }
 @media screen and (max-width: 580px){
@@ -212,6 +255,8 @@ header{
                 position: fixed;
                 left: 15px;
                 top:0;
+                font-size: 1.5em;
+                padding: 12px 15px;
             }
         }
         
@@ -259,6 +304,14 @@ header{
     }
     nav.open{
         width: 50%;
+    }
+
+    .contact{
+        display: flex;
+        flex-wrap: wrap;
+        div{
+            width: 100%;
+        }
     }
     
 }

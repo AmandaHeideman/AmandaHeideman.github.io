@@ -49,21 +49,29 @@ document.addEventListener("DOMContentLoaded", function (e){
                         " möjliga poäng för varje kategori på spelplanen.<br><br>"+
                         "Det här projektet fokuserade främst på javascript, där även den mesta html:en genererades"+
                         " utifrån hur många spelare som valts.";
-    
+
+                        let fig = document.createElement("figure");
+                        let img = document.createElement("img");
+                        img.setAttribute("src", "/images/yatzy_game.png");
+                        img.setAttribute("alt", "Skärmklipp av pågående spel");
+                        let caption = document.createElement("figcaption");
+                        caption.innerHTML = "Skärmklipp av pågående spel";
+                        fig.appendChild(img).after(caption);
+
                         let github = document.createElement("a");
                         github.setAttribute("href", "https://github.com/fermentedcat/YatzyGruppen_2");
-                        github.innerHTML = "Länk till GitHub-projektet";
+                        github.innerHTML = "&gt; Länk till GitHub-projektet";
                         
                         let game = document.createElement("a");
                         game.setAttribute("href", "https://amandaheideman.github.io/Yatzy_Group_Project");
-                        game.innerHTML = "Länk till spelet";
+                        game.innerHTML = "&gt; Länk till spelet";
     
-                        element.appendChild(text);
+                        element.appendChild(fig).after(text);
                         element.appendChild(github).after(game);
     
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
-                        back.innerHTML = "Tillbaka";
+                        back.innerHTML = "&gt; Tillbaka";
                         element.appendChild(back);
                     }
             
@@ -86,18 +94,18 @@ document.addEventListener("DOMContentLoaded", function (e){
     
                         let github = document.createElement("a");
                         github.setAttribute("href", "https://github.com/amandaheideman/quiz");
-                        github.innerHTML = "Länk till GitHub-projektet";
+                        github.innerHTML = "&gt; Länk till GitHub-projektet";
     
                         let game = document.createElement("a");
                         game.setAttribute("href", "https://amandaheideman.github.io/Quiz/");
-                        game.innerHTML = "Länk till quizet";
+                        game.innerHTML = "&gt; Länk till quizet";
     
                         element.appendChild(text);
                         element.appendChild(github).after(game);
     
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
-                        back.innerHTML = "Tillbaka";
+                        back.innerHTML = "&gt; Tillbaka";
                         element.appendChild(back);
                     }
             
@@ -114,20 +122,20 @@ document.addEventListener("DOMContentLoaded", function (e){
                         element.classList.add("show");
                         element.classList.remove("ACME");
     
-                        /* let github = document.createElement("a");
-                        github.setAttribute("href", "https://github.com/fermentedcat/YatzyGruppen_2");
-                        github.innerHTML = "Länk till GitHub-projektet";
+                        let github = document.createElement("a");
+                        github.setAttribute("href", "https://github.com/Hano2001/ACME-Grupp-4");
+                        github.innerHTML = "&gt; Länk till GitHub-projektet";
                         
                         let game = document.createElement("a");
-                        game.setAttribute("href", "https://amandaheideman.github.io/Yatzy_Group_Project");
-                        game.innerHTML = "Länk till spelet";
+                        game.setAttribute("href", "https://amandaheideman.github.io/ACME-Grupp-4/");
+                        game.innerHTML = "&gt; Länk till sidan";
     
-                        element.appendChild(text);
-                        element.appendChild(github).after(game); */
+                       // element.appendChild(text);
+                        element.appendChild(github).after(game);
     
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
-                        back.innerHTML = "Tillbaka";
+                        back.innerHTML = "&gt; Tillbaka";
                         element.appendChild(back);
                     }
             
@@ -146,18 +154,18 @@ document.addEventListener("DOMContentLoaded", function (e){
     
                         let github = document.createElement("a");
                         github.setAttribute("href", "https://github.com/amandaheideman/memory");
-                        github.innerHTML = "Länk till GitHub-projektet";
+                        github.innerHTML = "&gt; Länk till GitHub-projektet";
                         
                         let game = document.createElement("a");
                         game.setAttribute("href", "https://amandaheideman.github.io/Memory");
-                        game.innerHTML = "Länk till spelet";
+                        game.innerHTML = "&gt; Länk till spelet";
     
                         //element.appendChild(text);
                         element.appendChild(github).after(game);
     
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
-                        back.innerHTML = "Tillbaka";
+                        back.innerHTML = "&gt; Tillbaka";
                         element.appendChild(back);
                     }
             
