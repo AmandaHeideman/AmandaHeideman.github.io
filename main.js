@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function (e){
 
                         let fig = document.createElement("figure");
                         let img = document.createElement("img");
-                        img.setAttribute("src", "/images/yatzy_game.png");
+                        img.setAttribute("src", "/images/yatzy_game.PNG");
                         img.setAttribute("alt", "Skärmklipp av pågående spel");
                         let caption = document.createElement("figcaption");
                         caption.innerHTML = "Skärmklipp av pågående spel";
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function (e){
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
                         back.innerHTML = "&gt; Tillbaka";
-                        
+
                         //element.appendChild(text);
                         element.appendChild(github).after(game);
                         element.appendChild(back);
