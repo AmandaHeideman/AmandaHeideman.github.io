@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (e){
     
+    /* --HAMBURGERMENY-- */
     let hamburger = document.querySelector(".hamburger");
     let navLinks = document.querySelector(".nav-links");
     let nav = document.querySelector("nav");
@@ -7,15 +8,13 @@ document.addEventListener("DOMContentLoaded", function (e){
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("open");
         nav.classList.toggle("open");
-         /* links.forEach(link => {
-            link.classList.toggle("fade");
-        })  */
     });
 
+    /* --- PROJEKT I PORTFOLION--- */
     let projectDiv = document.getElementsByClassName("project");
-
     let projectArray = Array.from(projectDiv);
 
+    //Gör att man både kan klicka på projekt och tabba sig fram och trycka enter för att komma in i projektet
     projectArray.forEach(element => element.addEventListener("keyup", function(e){
         if(e.code==="Enter"){
             showDetails(element);
@@ -26,17 +25,21 @@ document.addEventListener("DOMContentLoaded", function (e){
     }));
 
     function showDetails(element){
-        
+        //Visar detaljsida för respektive projekt
+            
             let classArray = Array.from(element.classList);
     
             if(classArray.includes("yatzy")){
+                //Kollar vilken klass projektet man tryckte på har
                 projectArray.forEach(element => {
                     let classArray2 = Array.from(element.classList);
                     if(classArray2.includes("yatzy")==false){
+                        //Gömmer de andra projekten
                         element.innerHTML="";
                         element.classList.add("hide");
                     }
                     else{
+                        //Lägger till info om projektet
                         element.classList.add("show");
                         element.classList.remove("yatzy");
                         let text = document.createElement("p");
@@ -58,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function (e){
                         caption.innerHTML = "Skärmklipp av pågående spel";
                         fig.appendChild(img).after(caption);
 
+                        //Lägger till länkar
                         let github = document.createElement("a");
                         github.setAttribute("href", "https://github.com/fermentedcat/YatzyGruppen_2");
                         github.innerHTML = "&gt; Länk till GitHub-projektet";
@@ -66,17 +70,18 @@ document.addEventListener("DOMContentLoaded", function (e){
                         game.setAttribute("href", "https://amandaheideman.github.io/Yatzy_Group_Project");
                         game.innerHTML = "&gt; Länk till spelet";
     
-                        element.appendChild(fig).after(text);
-                        element.appendChild(github).after(game);
-    
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
                         back.innerHTML = "&gt; Tillbaka";
+
                         element.appendChild(back);
+                        element.appendChild(fig).after(text);
+                        element.appendChild(github).after(game);
                     }
             
                 })
             }
+            //samma sak repeteras för de andra projekten
             else if(classArray.includes("quiz")){
                 projectArray.forEach(element => {
                     let classArray2 = Array.from(element.classList);
@@ -87,11 +92,13 @@ document.addEventListener("DOMContentLoaded", function (e){
                     else{
                         element.classList.add("show");
                         element.classList.remove("quiz");
-    
+                        
+                        //Lägger till info
                         let text = document.createElement("p");
                         text.innerHTML = "Quizet var ett individuellt projekt där vi skulle med"+
                         " hjälp av ett API hämta frågor till själva quizet. "
     
+                        //Länkar
                         let github = document.createElement("a");
                         github.setAttribute("href", "https://github.com/amandaheideman/quiz");
                         github.innerHTML = "&gt; Länk till GitHub-projektet";
@@ -100,12 +107,12 @@ document.addEventListener("DOMContentLoaded", function (e){
                         game.setAttribute("href", "https://amandaheideman.github.io/Quiz/");
                         game.innerHTML = "&gt; Länk till quizet";
     
-                        element.appendChild(text);
-                        element.appendChild(github).after(game);
-    
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
                         back.innerHTML = "&gt; Tillbaka";
+                        
+                        element.appendChild(text);
+                        element.appendChild(github).after(game);
                         element.appendChild(back);
                     }
             
@@ -122,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function (e){
                         element.classList.add("show");
                         element.classList.remove("ACME");
     
+                        //Länkar
                         let github = document.createElement("a");
                         github.setAttribute("href", "https://github.com/Hano2001/ACME-Grupp-4");
                         github.innerHTML = "&gt; Länk till GitHub-projektet";
@@ -130,12 +138,13 @@ document.addEventListener("DOMContentLoaded", function (e){
                         game.setAttribute("href", "https://amandaheideman.github.io/ACME-Grupp-4/");
                         game.innerHTML = "&gt; Länk till sidan";
     
-                       // element.appendChild(text);
-                        element.appendChild(github).after(game);
-    
+                        
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
                         back.innerHTML = "&gt; Tillbaka";
+                        
+                        // element.appendChild(text);
+                        element.appendChild(github).after(game);
                         element.appendChild(back);
                     }
             
@@ -152,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function (e){
                         element.classList.add("show");
                         element.classList.remove("memory");
     
+                        //Länkar
                         let github = document.createElement("a");
                         github.setAttribute("href", "https://github.com/amandaheideman/memory");
                         github.innerHTML = "&gt; Länk till GitHub-projektet";
@@ -160,12 +170,12 @@ document.addEventListener("DOMContentLoaded", function (e){
                         game.setAttribute("href", "https://amandaheideman.github.io/Memory");
                         game.innerHTML = "&gt; Länk till spelet";
     
-                        //element.appendChild(text);
-                        element.appendChild(github).after(game);
-    
                         let back = document.createElement("a");
                         back.setAttribute("href", "portfolio.html");
                         back.innerHTML = "&gt; Tillbaka";
+                        
+                        //element.appendChild(text);
+                        element.appendChild(github).after(game);
                         element.appendChild(back);
                     }
             

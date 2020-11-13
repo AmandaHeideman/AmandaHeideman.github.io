@@ -1,0 +1,20 @@
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px;
+    div{
+        @include contentDiv();
+        display: flex;
+        flex-direction: column;
+        h1{
+            text-align: center;
+            margin-top: 0;
+        }
+        a{
+            @include hover($lightShade, 0.5);
+            &:hover, &:focus{
+                color: white;
+            }
+        }
+    }
+}

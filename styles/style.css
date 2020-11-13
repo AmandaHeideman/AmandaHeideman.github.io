@@ -1,85 +1,3 @@
-body {
-  background-color: #171826;
-  background-image: url("./bg_bggenerator_com.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #E8DBE7;
-  margin: 0;
-  font-family: 'El Messiri', sans-serif;
-  line-height: 1.5;
-}
-
-body p {
-  font-family: 'Raleway', sans-serif;
-}
-
-body a {
-  color: #E8DBE7;
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: #E8DBE7 2px solid;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: #171826;
-  width: 100%;
-}
-
-header a {
-  padding: 18.5px 15px;
-  min-width: 62px;
-  font-family: "El Messiri", sans-serif;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border: #7E1C6F;
-}
-
-header a:hover, header a:focus {
-  background-color: rgba(126, 28, 111, 0.5);
-  border-left: 4px solid #7E1C6F;
-  border-right: 4px solid #7E1C6F;
-  outline: none;
-  cursor: pointer;
-}
-
-header h3 .portrait {
-  display: none;
-}
-
-header nav {
-  height: 66.77px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header nav .nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .firstPage {
   height: 100%;
 }
@@ -173,8 +91,8 @@ header nav .nav-links {
       justify-self: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (300px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .portfolio .project {
@@ -365,18 +283,91 @@ header nav .nav-links {
   display: none;
 }
 
-@media screen and (min-width: 1240px) {
-  .portfolio {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+body {
+  /* ---Background--- */
+  background-color: #171826;
+  background-image: url("./bg_bggenerator_com.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  /* ---Text--- */
+  color: #E8DBE7;
+  font-family: 'El Messiri', sans-serif;
+  line-height: 1.5;
 }
 
-@media screen and (max-width: 930px) {
-  .portfolio {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
+body p {
+  font-family: 'Raleway', sans-serif;
+}
+
+body a {
+  color: #E8DBE7;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  /* ---Appearence--- */
+  background-color: #171826;
+  border-bottom: #E8DBE7 2px solid;
+  /* ---Position/Display--- */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* ---Text--- */
+}
+
+header nav {
+  height: 66.77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header a {
+  padding: 18.5px 15px;
+  min-width: 62px;
+  font-family: "El Messiri", sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: #7E1C6F;
+}
+
+header a:hover, header a:focus {
+  background-color: rgba(126, 28, 111, 0.5);
+  border-left: 4px solid #7E1C6F;
+  border-right: 4px solid #7E1C6F;
+  outline: none;
+  cursor: pointer;
+}
+
+header h3 .portrait {
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -402,20 +393,11 @@ header nav .nav-links {
     font-size: 1.5em;
     padding: 12px 15px;
   }
-  .portfolio {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px;
-  }
-  nav {
+  header nav {
     position: relative;
+    /* ---Opening hamburger menu--- */
   }
-  .hamburger {
+  header nav .hamburger {
     position: absolute;
     cursor: pointer;
     right: 5%;
@@ -424,7 +406,13 @@ header nav .nav-links {
             transform: translate(-5%, -50%);
     z-index: 2;
   }
-  .nav-links {
+  header nav .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  header nav .nav-links {
     position: fixed;
     background-color: #171826;
     width: 100%;
@@ -434,28 +422,29 @@ header nav .nav-links {
             flex-direction: column;
     pointer-events: none;
   }
-  .nav-links.open {
+  header nav .nav-links.open {
     pointer-events: all;
     position: relative;
     top: 133.54px;
-  }
-  .nav-links.open a {
     width: 273px;
+  }
+  header nav .nav-links.open a {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     border: #7E1C6F;
     text-align: center;
     /* padding: 18.5px 90px;
-            max-width: 273px; */
+                    width: 273px;
+                    max-width: 273px; */
   }
-  .nav-links.open a:hover, .nav-links.open a:focus {
+  header nav .nav-links.open a:hover, header nav .nav-links.open a:focus {
     background-color: rgba(126, 28, 111, 0.5);
     border-left: 4px solid #7E1C6F;
     border-right: 4px solid #7E1C6F;
     outline: none;
     cursor: pointer;
   }
-  nav.open {
+  header nav nav.open {
     width: 50%;
   }
   .contact {

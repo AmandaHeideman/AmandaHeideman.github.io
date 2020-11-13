@@ -1,0 +1,17 @@
+.about{
+    height: 100%;
+    div{
+        @include contentDiv();
+        width: 80%;
+        margin: 20px auto;
+        display: grid;
+        p{
+            grid-row-start: 2;
+        }
+        img{
+            grid-row-start: 2;
+            width: 95%;
+            margin-left: 20px;
+        }
+    }
+}

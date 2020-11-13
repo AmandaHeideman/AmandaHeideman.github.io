@@ -1,0 +1,33 @@
+@mixin flexCenter($direction){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;;
+}
+@mixin contentDiv{
+    background-color: $darkAcc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+@mixin hover($color, $opacity){
+    transition: 0.5s;
+    border: $lightAcc;
+    &:hover, &:focus{
+        background-color:rgba($color, $opacity);
+        border-left:4px solid $lightAcc;
+        border-right:4px solid $lightAcc;
+        outline: none;
+        cursor: pointer;
+    }
+}
+@mixin portfolioImage($id){
+    background-image: url(../images/#{$id}_purple.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px 240px;
+    &:hover, &:focus{
+        width: 210px;
+        background-image: url(../images/#{$id}_color.png);
+    }
+}

@@ -1,4 +1,8 @@
-ACCESSABILITY
+TILLGÄNGLIGHET
+Tillgänglighet är till för att alla, eller åtminstone så många som möjligt,
+ska kunna använda hemsidan. Det kan vara så att den är anpassad för skärmläsare,
+har syntolkning på videor/ljud, har en enkel och logiskt navigering etc. Helt
+enkelt anpassa så att så många som möjligt kan använda sidan utan problem.
 
 --1.4.3: Använd tillräcklig kontrast mellan text och bakgrund--
 Det här tillgänglighetskravet är något som jag tänker på i alla mina projekt, att ha 

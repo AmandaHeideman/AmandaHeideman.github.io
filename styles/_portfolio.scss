@@ -1,0 +1,75 @@
+.portfolio{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    .project{
+        @include contentDiv();
+        padding-top: 0;
+        justify-self: center;
+        text-align: center;
+        height: 300px;
+        width: 200px;
+        h3{
+            margin-top: 5px;
+        }
+        p{
+            text-align: left;
+        }
+        a{
+            display: flex;
+            align-items: space-evenly;
+            @include hover($lightAcc, 0.7);
+            width: 30%;
+        }
+    }
+    .yatzy{
+        @include portfolioImage(yatzy);
+        @include hover($darkAcc, 0.7);
+    }
+    .quiz{
+        @include portfolioImage(quiz);
+        @include hover($darkAcc, 0.7);
+    }
+    .ACME{
+        @include portfolioImage(ACME);
+        @include hover($darkAcc, 0.7);
+    }
+    .memory{
+        @include portfolioImage(memory);
+        @include hover($darkAcc, 0.7);
+        
+    }
+    .show{
+        //pointer-events: none;
+        &:focus{
+            outline:none;
+        }
+        a{
+            width: 100%;
+            @include hover($lightShade, 0.5);
+            &:hover, &:focus{
+                color: white;
+            }
+        }
+        width: 80%;
+        height: auto;
+        background-image: none;
+        grid-column-start: 1;
+        grid-column: span 4;
+        
+        figure{
+            margin: 10px;
+            float:right;
+            img{
+                width: 300px;
+                transition:transform 0.25s ease;
+                &:hover{
+                    transform:scale(1.5);
+                }
+            }
+        }
+    }
+    .hide{
+        display: none;
+    }
+}
