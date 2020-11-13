@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function (e){
                         back.setAttribute("href", "portfolio.html");
                         back.innerHTML = "&gt; Tillbaka";
 
-                        element.appendChild(back);
                         element.appendChild(fig).after(text);
                         element.appendChild(github).after(game);
+                        element.appendChild(back);
                     }
             
                 })
