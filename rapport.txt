@@ -1,8 +1,71 @@
-TILLGÄNGLIGHET
+### SCRUM ###
+
+Scrum är en agil arbetsmetod. Varje projekt delas upp i små beståndsdelar, som läggs i en 
+prioriterad ordning i en lista. Utifrån den listan väljs ett antal punkter ut som ska hinnas
+göras under en sprint (en kort, fast period på 3 dagar till 3 veckor). Varje dag hålls ett 
+kort möte (daily scrum) på 15 min, där alla i teamet får gå igenom vad de har gjort sen sist, 
+ifall de har stött på några svårigheter, och vad de planerar att göra under dagen. Efter 
+varje sprint hålls en sprint review, där man går igenom hur sprinten har gått, vad som har 
+fungerat bra/mindre bra, vad man kan förbättra i teamet osv.
+
+I varje team finns en produktägare, som är företrädare för beställaren av produkten, och som 
+bla bestämmer hur produkten ska se ut och vilka punkter som är viktigast. Det finns också en 
+scrum master, som ser till att teamet har det de behöver för att fungera bra, ser till att 
+avlägsna hinder osv.
+
+---Fördelar---
+Scrum gör att arbetet blir strukturerat, men även anpassningsbart. Ifall det kommer in nya 
+saker eller förändrnigar som ska med så är det inga problem, då allting som är med i projektet 
+prioriteras i en lista. Alla i teamet har en bra översikt över vad som ska göras och vad som 
+är viktigast, och vad de andra i teamet håller på med. Arbetet kan anpassas hela tiden utifrån 
+nya villkor och hur teamet fungerar.
+
+---Nackdelar/svårigheter---
+Fick göra lite research, och fick upp kandidatuppsatsen ”Scrums negativa konsekvenser” av 
+Petter Billgren Leon Wipp Ekman. Ett problem som togs upp där var kommunikation, där 
+kommunikation inom ett scrumteam där medlemmarna satt på olika platser fungerade sämre än ett 
+team som satt på samma plats, pga att den informella kommunikationen blev lidande. Även 
+kommunikation mellan scrumteam och andra avdelningar som inte jobbade med scrum beskrevs som 
+ett problem.
+
+### GRAFISK PROFIL ###
+
+En grafisk profil är en manual för hur allting ska se ut för ett företag. Allt från färger, 
+logga, typsnitt, marginaler, radavstånd, hur knappar ser ut etc, ingår i en grafisk profil. 
+En grafisk profil är till för att allting ska få ett enhetligt uttryck, och göra företaget 
+lätt att känna igen.
+
+---Fördelar---
+Som utvecklare behöver man inte ta så många designbeslut eftersom allting står i den grafiska 
+profilen. Arbetet kan därför bli mer effektivt om man inte behöver gå fram och tillbaka med 
+tex olika färger eller olika storlekar på text osv, för att se vad som ser bäst ut, eftersom 
+alla såna beslut redan är tagna och står i den grafiska profilen.
+
+---Nackdelar/svårigheter---
+En nackdel är att man inte får lika mycket frihet över hur sidan ska se ut, eftersom allting 
+redan är förutbestämt. Kanske har man en idé om hur det kan se bättre ut, men om det finns en 
+grafisk profil så måste den följas.
+
+### TILLGÄNGLIGHET ###
+
 Tillgänglighet är till för att alla, eller åtminstone så många som möjligt,
 ska kunna använda hemsidan. Det kan vara så att den är anpassad för skärmläsare,
 har syntolkning på videor/ljud, har en enkel och logiskt navigering etc. Helt
 enkelt anpassa så att så många som möjligt kan använda sidan utan problem.
+
+---Fördelar---
+Fördelen med tillgänglighet är som sagt att det gör att så många som möjligt ska kunna använda 
+hemsidan. Tillgänglighet tar hänsyn till att alla fungerar olika. Även om man kanske tänker 
+att tillgänglighet främst hjälper folk med funktionsvariationer, så skulle jag nog vilja säga 
+att tillgänglighet hjälper alla. Som utvecklare är det annars lätt att fastna i vad som funkar 
+bra för en själv, utan att tänka på att alla tänker olika på vad som är enkelt att använda.
+
+---Nackdelar/svårigheter---
+Just eftersom alla fungerar olika är det svårt att få saker att faktiskt fungera optimalt för 
+alla. Vad som funkar bäst för en kanske inte funkar alls för nån annan, så det gäller att göra 
+avvägningar och kompromissa. Ett alternativ kanske kan vara att ge användaren olika 
+valmöjligheter för hur sidan visas, men det kräver också mera kod. En annan svårighet är att 
+det finns så många tillgänglighetskrav, att det kan vara svårt att få med alla.
 
 --1.4.3: Använd tillräcklig kontrast mellan text och bakgrund--
 Det här tillgänglighetskravet är något som jag tänker på i alla mina projekt, att ha 

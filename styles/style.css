@@ -279,6 +279,19 @@
           transform: scale(1.5);
 }
 
+.portfolio .show figure .memoryImg {
+  width: 400px;
+}
+
+.portfolio .show figure .acmeImg {
+  width: 100%;
+}
+
+.portfolio .show figure .acmeImg:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
 .portfolio .hide {
   display: none;
 }

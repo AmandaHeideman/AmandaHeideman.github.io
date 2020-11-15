@@ -67,6 +67,15 @@
                     transform:scale(1.5);
                 }
             }
+            .memoryImg{
+            width:400px;
+            }
+            .acmeImg{
+                width: 100%;
+                &:hover{
+                    transform: none;
+                }
+            }
         }
     }
     .hide{
